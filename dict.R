@@ -1,5 +1,5 @@
 # This Dictionary is the work done by Alok Gautam
-# The txt file included in could be found at Project Gutenberg.
+# The txt file included could be found at Project Gutenberg an open source platform.
 # No extra R Packages are needed except the base.
 
 # creating a connection to read the lines from the text
