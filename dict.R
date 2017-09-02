@@ -1,10 +1,10 @@
 # This Dictionary is the work done by Alok Gautam
-# The txt file included could be found at Project Gutenberg an open source platform.
+# The txt file included in could be found at Project Gutenberg.
 # No extra R Packages are needed except the base.
 
 # creating a connection to read the lines from the text
 
-con <- file("../files/dict.txt")
+con <- file("../getclean/dict.txt")
 dict <- readLines(con = con)
 close(con = con)
 
@@ -19,7 +19,8 @@ words <- dictfinal[wordlist]
 while(check == 1) {
 # Inputting the word whose meaning is to be found
 userip <- readline(prompt = "Enter the word : ")
-print(userip)
+cat(userip)
+cat("\n")
 
 # changing the value to upper case
 word <- toupper(userip)
@@ -29,6 +30,8 @@ all <- data.frame(wordlist,words,stringsAsFactors = F)
 
 # Finding the row numbers of the matched users' word
 match <- grep(pattern = word,x = all[,2])
+if (length(match) == 0)
+{ cat("\nThe word entered is not in the Dictionary"); break }
 df1 <- as.data.frame(all[match,2])
 colnames(df1) <- c("matched")
 print(df1)
@@ -39,19 +42,17 @@ if(length(match) == 1) {
         pos1 <- all[rownum,1]
         pos2 <- all[rownum + 1, 1]
         cat(" ___________________________________________________________________________________ \n")
-        print(dictfinal[pos1 : (pos2 - 2)])
-        cat(" ___________________________________________________________________________________ \n")
-} else if (length(match) == 0)
-{ print("The word entered is not in the Dictionary")
-} else {
+        cat(dictfinal[pos1 : (pos2 - 2)])
+        cat("\n ___________________________________________________________________________________ \n")
+} else if(length(match) != 1) {
         num <- readline(prompt = "Select the number corresponding to the the matched word: ")
         num <- as.numeric(num)
         rownum <- as.numeric(rownames(vec[vec$pos %in% num,]))
         pos1 <- all[rownum,1]
         pos2 <- all[rownum + 1, 1]
         cat(" ___________________________________________________________________________________ \n")
-        print(dictfinal[pos1 : (pos2 - 2)])
-        cat(" ___________________________________________________________________________________ \n")
+        cat(dictfinal[pos1 : (pos2 - 2)])
+        cat("\n ___________________________________________________________________________________ \n")
 }
         cat("Do you Wish to search more words? \n Enter : \n 1. Yes \n 2. No \n")
         ip <- readline()
