@@ -56,5 +56,5 @@ if(length(match) == 1) {
         cat("Do you Wish to search more words? \n Enter : \n 1. Yes \n 2. No \n")
         ip <- readline()
         ip <- as.numeric(ip)
-        if (ip <- 2) {break}
+        if (ip == 2) {break}
 }
