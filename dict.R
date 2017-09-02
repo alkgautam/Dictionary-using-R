@@ -4,7 +4,7 @@
 
 # creating a connection to read the lines from the text
 
-con <- file("../getclean/dict.txt")
+con <- file("files/dict.txt")
 dict <- readLines(con = con)
 close(con = con)
 
