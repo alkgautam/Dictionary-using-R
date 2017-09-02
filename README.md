@@ -11,3 +11,10 @@ The dict.txt file is The Project Gutenberg EBook of Webster's Unabridged Diction
 # Link :
 https://www.gutenberg.org/ebooks/29765
 
+If you have R installed on your system, you can simply extarct the downloaded zip file then source the dict.R file as follows:
+
+```{r, echo = FALSE}
+setwd("C:/../Dictionary-using-R-master/")                          # Your extracted dir
+source("dict.R")
+```
+Or you can download the binary R from CRAN.
