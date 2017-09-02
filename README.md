@@ -17,4 +17,6 @@ If you have R installed on your system, you can simply extarct the downloaded zi
 setwd("C:/../Dictionary-using-R-master/")                          # Your extracted dir
 source("dict.R")
 ```
-Or you can download the binary R from CRAN.
+Or you can download the R binaries from CRAN.
+
+https://cran.r-project.org/bin/windows/base/R-3.4.1-win.exe
