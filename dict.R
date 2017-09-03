@@ -42,7 +42,7 @@ else if (length(match) == 1) {
         pos1 <- all[rownum,1]
         pos2 <- all[rownum + 1, 1]
         cat(" ___________________________________________________________________________________ \n")
-        cat(dictfinal[pos1 : (pos2 - 2)])
+        cat(print(dictfinal[pos1 : (pos2 - 2)]))
         cat("\n ___________________________________________________________________________________ \n")
 } else {
         df1 <- as.data.frame(all[match,2])
@@ -56,7 +56,7 @@ else if (length(match) == 1) {
         pos1 <- all[rownum,1]
         pos2 <- all[rownum + 1, 1]
         cat(" ___________________________________________________________________________________ \n")
-        cat(dictfinal[pos1 : (pos2 - 2)])
+        cat(print(dictfinal[pos1 : (pos2 - 2)]))
         cat("\n ___________________________________________________________________________________ \n")
 }
         cat("Do you Wish to search more words? \n Enter : \n 1. Yes \n 2. No \n")
