@@ -1,5 +1,7 @@
 # Dictionary-using-R
-This is an R program which takes a word and return its meaning
+This is an R program which takes a word and return its meaning.
+You can download the zip file and extract it to a specified folder. You need R to be installed in your sytem.
+This dictionary work offline.
 
 # Note:
 This program requires R to be preinstalled. If not installed you can install it from CRAN.
